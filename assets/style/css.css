@@ -1,0 +1,699 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #1A1A1A;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    overflow: hidden;
+    margin-top: -90px;
+    z-index: 999;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    width: 30%;
+    padding: 50px;
+    background: #ffffff;
+    position: relative;
+    border-radius: 10px;
+    transform: translateY(-100vh);
+    animation: animate 0.5s linear forwards;
+
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close img {
+    width: 20px;
+    height: 20px;
+}
+
+.form-text {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modal-input {
+    border-bottom: 1px solid black !important;
+    margin-bottom: 15px;
+}
+
+.modal-descr {
+    margin-top: 20px;
+    display: flex;
+}
+
+.modal-descr a {
+    color: blue;
+}
+
+@keyframes animate {
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+
+.wrapper {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.button {
+    display: block;
+    padding: 16px 32px;
+    background: #066F14;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+header {
+    margin-top: 28px;
+    position: relative;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 40px;
+    left: 17%;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#burger {
+    position: relative;
+    width: 31px;
+    height: 25px
+}
+
+#burger span {
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #939ea2;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+}
+
+#burger span:first-child {
+    top: 0;
+    bottom: auto;
+}
+
+#burger span:last-child {
+    bottom: 0;
+    top: auto;
+}
+
+.nav-menu.active #burger span {
+    top: 0;
+    bottom: 0;
+    -moz-transform: rotate(45deg);
+    /* Для Firefox */
+    -ms-transform: rotate(45deg);
+    /* Для IE */
+    -webkit-transform: rotate(45deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(45deg);
+    /* Для Opera */
+    transform: rotate(45deg);
+}
+
+.nav-menu.active #burger span:last-child {
+    -moz-transform: rotate(-45deg);
+    /* Для Firefox */
+    -ms-transform: rotate(-45deg);
+    /* Для IE */
+    -webkit-transform: rotate(-45deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(-45deg);
+    /* Для Opera */
+    transform: rotate(-45deg);
+}
+
+.menu {
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    background-color: #fff;
+    position: relative;
+    left: -100%;
+}
+
+.menu a {
+    color: rgb(39, 61, 70);
+    text-decoration: none;
+}
+
+.nav-menu.active .menu {
+    left: 0;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nav {
+    position: fixed;
+    width: 60%;
+    padding: 25px 0;
+    background-color: #fff;
+    top: 0;
+    z-index: 989;
+}
+
+.leaf {
+    position: absolute;
+    bottom: 20%;
+    left: 45%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.link {
+    margin: 0 24px;
+}
+
+.log {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.log a {
+    padding: 12px 16px;
+}
+
+.log a:first-child {
+    margin-right: 50px;
+}
+
+.log a:hover {
+    background: #066F14;
+    border-radius: 4px;
+    color: #FFFFFF;
+    transition: all .3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+.header-text {
+    width: 550px;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: 72px;
+}
+
+.header-descr {
+    width: 510px;
+    font-weight: 400;
+    margin-top: 24px;
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+.button-header {
+    margin-top: 56px;
+}
+
+.succes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    text-align: center;
+
+}
+
+.succes p:first-child {
+    font-weight: 700;
+    font-size: 36px;
+    color: #001B04;
+
+}
+
+.succes p:nth-child(2) {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.collection>.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.collection-text {
+    width: 390px;
+}
+
+.collection-title {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.collection-seeall {
+    display: block;
+    margin-top: 35px;
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+}
+
+.collection-seeall::after {
+    content: '';
+    background: url('../img/Arrow.png');
+    display: block;
+    width: 16px;
+    position: absolute;
+    left: 38%;
+    top: 6px;
+    width: 17px;
+    height: 14px;
+}
+
+.collection-img img:nth-child(2) {
+    margin: 0 24px;
+}
+
+.about>.wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 128px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.about-img {
+    margin-right: 80px;
+}
+
+.about-header {
+    font-weight: 700;
+    font-size: 18px;
+    color: #066F14;
+}
+
+.about-title {
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 12px;
+}
+
+.about-descr {
+    width: 505px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: justify;
+    margin-top: 24px;
+}
+
+.about-descr-bold {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.button-about {
+    margin-top: 30px;
+}
+
+.bestproduct {
+    margin-top: 128px;
+    text-align: center;
+}
+
+.bestproduct-title {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.bestproduct-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    font-weight: 500;
+}
+
+.bestproduct-link {
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.bestproduct-link>a:hover {
+    color: #066F14;
+}
+
+.bestproduct-gallary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}
+
+.bestproduct-gallary-item {
+    padding: 10px 32px 32px 32px;
+    width: 270px;
+    background-color: #EAF2E5;
+
+}
+
+.bestproduct-gallary-item:nth-child(2) {
+    background: #F0EBE6;
+}
+
+.bestproduct-gallary-item:nth-child(3) {
+    background: #E2ECE4;
+
+}
+
+.bestproduct-gallary-item:nth-child(4) {
+    background: #E7EEED;
+}
+
+.gallary-item_name {
+    font-weight: 600;
+    text-align: left;
+    font-size: 24px;
+}
+
+.gallary-stars {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.gallary-star {
+    margin-right: 5px;
+}
+
+.price {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+}
+
+.button-bestproduct {
+    margin: 40px auto 0;
+}
+
+.says {
+    margin-top: 144px;
+    position: relative;
+}
+
+.says>.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.says-title {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.says-descr {
+    width: 500px;
+    text-align: justify;
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.says-review {
+    background: #066F14;
+    width: 600px;
+    padding: 20px 32px;
+    margin-top: 55px;
+    position: absolute;
+    z-index: 10;
+}
+
+.says-review-author {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.apostrophe {
+    position: absolute;
+    right: 0;
+}
+
+.author-img {
+    margin-right: 10px;
+}
+
+.author-name {
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.author-position {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 6px;
+    color: #ffffff;
+}
+
+.says-review-comment {
+    width: 500px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.says-img {
+    z-index: -1;
+}
+
+.subscribe {
+    margin-top: 165px;
+
+}
+
+.subscribe-form {
+    width: 1040px;
+    background: #DFFFE3;
+    padding: 60px 500px 60px 60px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.subscribe-title {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.subscribe-descr {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.form {
+    width: 450px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 20px;
+    border: none;
+
+}
+
+.form-button {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    padding: 11px 16px;
+}
+
+.subscribe-img {
+    position: absolute;
+    top: -35px;
+    right: 40px;
+}
+
+.instagram {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.instagram-title {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.instagram-descr {
+    width: 550px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.instagram-gallery {
+    display: flex;
+    margin-top: 40px;
+}
+
+.instagram-gallery-item {
+    position: relative;
+    transition: all 0.5s;
+}
+
+.instagram-gallery-item:hover::before {
+    content: '';
+    width: 100%;
+    height: 97.5%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.34);
+
+}
+
+.instagram-gallery-item:hover::after {
+    content: '';
+    width: 80px;
+    height: 80px;
+    background: url('../../img/Instagram.png');
+    position: absolute;
+    top: 80px;
+    left: 80px;
+}
+
+footer {
+    margin-top: 125px;
+    margin-bottom: 95px;
+}
+
+.footer-title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.footer-descr {
+    width: 306px;
+    margin-top: 24px;
+}
+
+.footer .wrapper {
+    display: flex;
+
+}
+
+.footer-icon {
+    margin-top: 22px;
+}
+
+.footer-icon>img {
+    margin-right: 16px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 100px;
+    width: 100%;
+
+}
+
+.links-items {
+    display: block;
+    width: 30%;
+}
+
+.links-items li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+
+}
+
+
+.formpage {
+    margin-top: 50px;
+}
+
+.formpage form {
+    margin: 0 auto;
+    width: 50%;
+}
