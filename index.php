@@ -89,6 +89,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
                     <li class="link"><a href="#about">About Us</a> </li>
                     <li class="link"><a href="#blog">Blog</a> </li>
                     <li class="link"><a href="#contact">Contact</a> </li>
+                    <li class="link"><a href="./portfolio/index.html">Portfolio</a> </li>
                 </ul>
                 <div class="log">
                     <?php if (isAuthorized()) : ?>

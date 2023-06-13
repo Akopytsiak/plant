@@ -17,3 +17,5 @@ $('#reg-form').on('submit', function (e) {
 
     });
 });
+
+
